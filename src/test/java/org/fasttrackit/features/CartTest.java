@@ -1,29 +1,16 @@
 package org.fasttrackit.features;
 
-import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Managed;
-import net.thucydides.core.annotations.Steps;
-import org.fasttrackit.steps.CartSteps;
-import org.fasttrackit.steps.LoginSteps;
+import org.fasttrackit.utils.Constants;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.openqa.selenium.WebDriver;
 
-@RunWith(SerenityRunner.class)
-public class CartTest {
-
-    @Managed(uniqueSession = true)
-    private WebDriver driver;
-
-    @Steps
-    private LoginSteps loginSteps;
-    @Steps
-    private CartSteps cartSteps;
-
+public class CartTest extends BaseTest {
+    private String productName = "SILVER DESERT NECKLACE";
 
     @Test
-    public void addToCartTest(){
-        loginSteps.doLogin("cosmin@fasttrackit.org","123456");
-
+    public void addToCartTest() {
+        loginSteps.doLogin(Constants.USER_EMAIL, Constants.USER_PASS);
+        searchSteps.goToProductDetailsPage(productName);
+        cartSteps.clickAddToCart();
+        cartSteps.verifyProductWasAddedToCart(productName);
     }
 }
