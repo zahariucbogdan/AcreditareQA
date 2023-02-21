@@ -16,6 +16,5 @@ public class CartSteps extends BaseSteps {
     @Step
     public void ProceedToCheckout () {
         changeQuantity();
-        clickCheckoutButton();
-    }
+        clickCheckoutButton();}
 }

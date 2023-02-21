@@ -29,4 +29,3 @@ public class BaseTest {
     @Steps
     protected SearchResultSteps searchResultSteps;
     }
-}

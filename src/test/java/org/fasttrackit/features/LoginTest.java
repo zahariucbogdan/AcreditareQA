@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(SerenityRunner.class)
-public class LoginTests extends BaseTest {
+public class LoginTest extends BaseTest {
     @Test
     public void validLogin () {
         loginSteps.validLogin();
