@@ -1,20 +1,21 @@
 package org.fasttrackit.steps;
 
-
 import net.thucydides.core.annotations.Step;
-import org.junit.Assert;
+import org.fasttrackit.pages.CartPage;
 
 public class CartSteps extends BaseSteps {
-
-
+    CartPage cartPage;
     @Step
-    public void clickAddToCart() {
-        productPage.clickAddToCartButton();
+    public void changeQuantity() {
+        cartPage.addQuantity();
     }
-
     @Step
-    public void verifyProductWasAddedToCart(String productName) {
-        Assert.assertTrue("Product was not added to cart!", cartPage.wasProductWasAddedToCart(productName));
+    public void clickCheckoutButton () {
+        cartPage.clickOnAddToCartButton();
     }
-
+    @Step
+    public void ProceedToCheckout () {
+        changeQuantity();
+        clickCheckoutButton();
+    }
 }

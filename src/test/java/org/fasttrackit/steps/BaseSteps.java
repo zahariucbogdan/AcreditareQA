@@ -4,12 +4,14 @@ import net.thucydides.core.steps.ScenarioSteps;
 import org.fasttrackit.pages.*;
 
 public class BaseSteps extends ScenarioSteps {
-
-    protected AccountPage accountPage;
+    protected AddToCartPage addToCartPage;
+    protected CartPage cartPage;
+    protected CommentPage commentPage;
     protected HomePage homePage;
     protected LoginPage loginPage;
-    protected SearchResultsPage searchResultsPage;
+    protected LogoutPage logoutPage;
+    protected OrdersPage ordersPage;
     protected ProductPage productPage;
-    protected CartPage cartPage;
-
+    protected RegistrationPage registrationPage;
+    protected SearchResultPage searchResultPage;
 }

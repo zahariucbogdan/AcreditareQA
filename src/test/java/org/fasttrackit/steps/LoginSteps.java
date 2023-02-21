@@ -1,50 +1,68 @@
 package org.fasttrackit.steps;
 
 import net.thucydides.core.annotations.Step;
-import org.fasttrackit.utils.Messages;
-import org.junit.Assert;
+import org.fasttrackit.pages.HomePage;
+import org.fasttrackit.pages.LoginPage;
+import org.fasttrackit.utils.Constants;
 
 public class LoginSteps extends BaseSteps {
-
-
+    HomePage homePage;
+    LoginPage loginPage;
     @Step
-    public void navigateToLoginPage() {
-        homePage.clickOnAccountButton();
-        homePage.clickOnLoginLink();
-    }
-
+    public void goToMyAccountButton() {
+        homePage.clickMyAccountButton(); }
     @Step
-    public void typeUserEmail(String email) {
-        loginPage.setEmailField(email);
-    }
-
+    public void loginWithValidCredentials() {
+        loginPage.trueCredentialsLogin(Constants.USER_EMAIL, Constants.USER_PASS); }
     @Step
-    public void typePassword(String password) {
-        loginPage.setPasswordField(password);
-    }
-
+    public void loginWithInvalidCredentials() {
+        loginPage.trueCredentialsLogin("blabla@whatever.com", "ihavenoidea"); }
     @Step
-    public void clickLogin() {
-        loginPage.clickLoginButton();
-    }
-
+    public void checkLoginError() {
+        loginPage.checkFailedLogin("ERROR: Invalid email address."); }
     @Step
-    public void userIsLoggedIn(String userName) {
-//        Assert.assertTrue(accountPage.isWelcomeText(userName));
-//        Assert.assertEquals("Hello, " + userName + "!", accountPage.getWelcomeText());
-        accountPage.userIsLoggedIn(userName);
-    }
-
+    public void clickOnOrders () {
+        loginPage.clickOnOrdersButton(); }
     @Step
-    public void doLogin(String email, String pass) {
-        navigateToLoginPage();
-        typeUserEmail(email);
-        typePassword(pass);
-        clickLogin();
-    }
-
+    public void clickLogout () {
+        loginPage.clickOnLogoutButton(); }
     @Step
-    public void checkPasswordFieldRequired() {
-        Assert.assertEquals(Messages.THIS_IS_A_REQUIRED_FIELD, loginPage.getRequiredPasswordText());
-    }
+    public void clickSearchBar () {
+        loginPage.clickOnSearchBar(); }
+    @Step
+    public void searchBeanie () {
+        loginPage.searchProduct(); }
+    @Step
+    public void clickShopButton () {
+        loginPage.clickOnShopButton(); }
+    @Step
+    public void validLogin() {
+        goToMyAccountButton();
+        loginWithValidCredentials();}
+    @Step
+    public void invalidLogin() {
+        goToMyAccountButton();
+        loginWithInvalidCredentials();
+        checkLoginError(); }
+    @Step
+    public void goToOrders () {
+        goToMyAccountButton();
+        loginWithValidCredentials();
+        clickOnOrders(); }
+    @Step
+    public void logout () {
+        goToMyAccountButton();
+        loginWithValidCredentials();
+        clickLogout(); }
+    @Step
+    public void useSearchBar () {
+        goToMyAccountButton();
+        loginWithValidCredentials();
+        clickSearchBar();
+        searchBeanie(); }
+    @Step
+    public void goToShop (){
+        goToMyAccountButton();
+        loginWithValidCredentials();
+        clickShopButton(); }
 }

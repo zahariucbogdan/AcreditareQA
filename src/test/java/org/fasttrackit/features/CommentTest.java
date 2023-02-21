@@ -5,11 +5,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(SerenityRunner.class)
-public class CartTest extends BaseTest {
+public class CommentTest extends BaseTest {
     @Test
-    public void validProcceedCheckout () {
+    public void checkReviewMaximumLength () {
         loginSteps.useSearchBar();
-        searchResultSteps.clickResultedProduct();
-        cartSteps.ProceedToCheckout();
+        searchResultSteps.selectResultedProduct();
+        productSteps.writeReview();
+        commentSteps.approvalMessage();
     }
 }

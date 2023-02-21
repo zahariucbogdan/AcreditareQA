@@ -5,11 +5,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(SerenityRunner.class)
-public class CartTest extends BaseTest {
+public class AddToCartTest extends BaseTest {
     @Test
-    public void validProcceedCheckout () {
+    public void validAddToCart () {
         loginSteps.useSearchBar();
         searchResultSteps.clickResultedProduct();
-        cartSteps.ProceedToCheckout();
+        addToCartSteps.addBeanieToCart();
     }
 }
