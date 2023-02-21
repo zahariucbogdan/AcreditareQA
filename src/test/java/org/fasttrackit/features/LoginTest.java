@@ -14,7 +14,6 @@ public class LoginTest extends BaseTest {
         loginSteps.clickLogin();
         loginSteps.userIsLoggedIn(Constants.USER_NAME);
     }
-
     @Test
     public void invalidPasswordLoginTest() {
         loginSteps.navigateToLoginPage();

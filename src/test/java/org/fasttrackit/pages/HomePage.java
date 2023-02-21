@@ -10,7 +10,6 @@ public class HomePage extends BasePage {
 
     @FindBy(css = ".skip-account .label")
     private WebElementFacade accountButton;
-
     @FindBy(css = "[title='Log In']")
     private WebElementFacade loginLink;
 

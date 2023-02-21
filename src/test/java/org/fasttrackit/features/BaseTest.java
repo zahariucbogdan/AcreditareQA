@@ -16,14 +16,12 @@ public class BaseTest {
 
     @Managed(uniqueSession = true)
     public WebDriver driver;
-
     @Steps
     protected LoginSteps loginSteps;
     @Steps
     protected CartSteps cartSteps;
     @Steps
     protected SearchSteps searchSteps;
-
     @Before
     public void initTests(){
         driver.manage().window().maximize();

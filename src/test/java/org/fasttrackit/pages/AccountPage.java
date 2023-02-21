@@ -8,11 +8,9 @@ public class AccountPage extends BasePage {
 
     @FindBy(css = ".hello strong")
     private WebElementFacade welcomeTextElement;
-
     public boolean isWelcomeText(String userName) {
         return welcomeTextElement.containsOnlyText("Hello, " + userName + "!");
     }
-
     public String getWelcomeText(){
         return welcomeTextElement.getText();
     }
