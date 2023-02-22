@@ -19,7 +19,7 @@ public class ProductPage extends BasePage {
         clickOn(rateStars);
     }
     public void writeComment (){
-        typeInto(reviewField, "A test comment !");
+        typeInto(reviewField, "Test comment !");
     }
     public void clickOnSubmitButton () {
         clickOn(submitButton);
