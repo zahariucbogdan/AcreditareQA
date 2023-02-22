@@ -3,6 +3,7 @@ package org.fasttrackit.steps;
 import net.thucydides.core.annotations.Step;
 import org.fasttrackit.pages.CartPage;
 
+
 public class CartSteps extends BaseSteps {
     CartPage cartPage;
     @Step
@@ -16,5 +17,6 @@ public class CartSteps extends BaseSteps {
     @Step
     public void ProceedToCheckout () {
         changeQuantity();
-        clickCheckoutButton();}
-}
+        clickCheckoutButton();
+    }
+    }

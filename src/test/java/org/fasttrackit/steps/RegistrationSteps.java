@@ -5,8 +5,6 @@ import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.RegistrationPage;
 
 public class RegistrationSteps extends BaseSteps {
-    HomePage homePage;
-    RegistrationPage registrationPage;
     @Step
     public void goToMyAccountButton() { homePage.clickMyAccountButton(); }
     @Step

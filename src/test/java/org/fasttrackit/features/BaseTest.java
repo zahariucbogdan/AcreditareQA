@@ -10,10 +10,12 @@ import org.openqa.selenium.WebDriver;
 
 @RunWith(SerenityRunner.class)
 public class BaseTest {
+    @Managed(uniqueSession = true)
+    public WebDriver driver;
     @Steps
     protected AddToCartSteps addToCartSteps;
     @Steps
-    protected AddToCartSteps cartSteps;
+    protected CartSteps cartSteps;
     @Steps
     protected CommentSteps commentSteps;
     @Steps
@@ -28,4 +30,9 @@ public class BaseTest {
     protected RegistrationSteps registrationSteps;
     @Steps
     protected SearchResultSteps searchResultSteps;
+    @Before
+    public void initTests(){
+        driver.manage().window().maximize();
+        driver.get("http://qa1.fasttrackit.org:8008/");
+    }
     }

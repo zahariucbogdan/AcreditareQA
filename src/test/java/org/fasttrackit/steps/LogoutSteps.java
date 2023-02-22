@@ -5,7 +5,6 @@ import org.fasttrackit.pages.LogoutPage;
 import org.junit.Assert;
 
 public class LogoutSteps extends BaseSteps {
-    LogoutPage logoutPage;
     @Step
     public void checkLogout () {
         Assert.assertTrue(logoutPage.checkLogoutMessage("You are now logged out."));

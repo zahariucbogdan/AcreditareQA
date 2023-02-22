@@ -4,7 +4,6 @@ import net.thucydides.core.annotations.Step;
 import org.fasttrackit.pages.ProductPage;
 
 public class ProductSteps extends BaseSteps {
-    ProductPage productPage;
     @Step
     public void clickReviewButton () {
         productPage.clickOnReviewButton();

@@ -4,7 +4,6 @@ import net.thucydides.core.annotations.Step;
 import org.fasttrackit.pages.SearchResultPage;
 
 public class SearchResultSteps extends BaseSteps {
-    SearchResultPage searchResultPage;
     @Step
     public void clickResultedProduct () {
         searchResultPage.clickOnResultedProduct();

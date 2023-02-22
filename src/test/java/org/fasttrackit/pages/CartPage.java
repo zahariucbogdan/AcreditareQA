@@ -23,4 +23,4 @@ public class CartPage extends BasePage {
     public void clickOnCheckoutButton() {
         clickOn(proceedToCheckoutButton);
     }
-}
+    }

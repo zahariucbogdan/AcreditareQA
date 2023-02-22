@@ -6,8 +6,6 @@ import org.fasttrackit.pages.LoginPage;
 import org.fasttrackit.utils.Constants;
 
 public class LoginSteps extends BaseSteps {
-    HomePage homePage;
-    LoginPage loginPage;
     @Step
     public void goToMyAccountButton() {
         homePage.clickMyAccountButton(); }

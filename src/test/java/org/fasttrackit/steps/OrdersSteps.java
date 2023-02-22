@@ -5,7 +5,6 @@ import org.fasttrackit.pages.OrdersPage;
 import org.junit.Assert;
 
 public class OrdersSteps extends BaseSteps {
-    OrdersPage ordersPage;
     @Step
     public void checkExistingOrders () {
         Assert.assertTrue(ordersPage.checkExistingOrder("#117"));

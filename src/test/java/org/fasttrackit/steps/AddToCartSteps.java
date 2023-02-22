@@ -20,6 +20,5 @@ public class AddToCartSteps extends BaseSteps {
     @Step
     public void addBeanieToCart() {
         selectFromList();
-        viewCart();
-    }
+        viewCart(); }
 }
