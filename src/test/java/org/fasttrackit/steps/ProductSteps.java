@@ -1,7 +1,7 @@
 package org.fasttrackit.steps;
 
 import net.thucydides.core.annotations.Step;
-import org.fasttrackit.pages.ProductPage;
+
 
 public class ProductSteps extends BaseSteps {
     @Step
