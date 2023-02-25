@@ -3,17 +3,18 @@ package org.fasttrackit.steps;
 import net.thucydides.core.annotations.Step;
 import org.fasttrackit.pages.HomePage;
 import org.fasttrackit.pages.RegistrationPage;
+import org.fasttrackit.utils.Constants;
 
 public class RegistrationSteps extends BaseSteps {
     @Step
     public void goToMyAccountButton() { homePage.clickMyAccountButton(); }
     @Step
     public void setRegistrationEmail() {
-        registrationPage.setRegistrationEmail("bogdan@gmail.com");
+        registrationPage.setRegistrationEmail(Constants.USER_EMAIL);
     }
     @Step
     public void setRegistrationPassword() {
-        registrationPage.setRegistrationPassword("Qwerty---123456789?");
+        registrationPage.setRegistrationPassword(Constants.USER_PASS);
     }
     @Step
     public void clickOnRegisterButton() {

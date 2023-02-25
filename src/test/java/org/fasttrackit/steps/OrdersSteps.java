@@ -7,7 +7,7 @@ import org.junit.Assert;
 public class OrdersSteps extends BaseSteps {
     @Step
     public void checkExistingOrders () {
-        Assert.assertTrue(ordersPage.checkExistingOrder("#117"));
+        Assert.assertTrue(ordersPage.checkExistingOrder("#917"));
     }
     @Step
     public void checkOrders () {
